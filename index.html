@@ -29,7 +29,7 @@
             margin: 2rem auto;
         }
 
-        h1, h2, h3 {
+        h2, h3 {
             margin: 0;
             color: #24292e;
         }
@@ -46,11 +46,13 @@
             color: #fff;
             padding: 2rem 0;
             text-align: center;
+            position: relative; /* ensures it stays in normal flow */
+            z-index: 10; /* above other elements */
         }
 
-            header p {
-                margin-top: 0.5rem;
-            }
+        header p {
+            margin-top: 0.5rem;
+        }
 
         nav a {
             margin: 0 10px;
@@ -68,6 +70,22 @@
             gap: 1.5rem;
         }
 
+        .school-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .school-projects-grid .card-content {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         .card {
             display: flex;
             flex-direction: row;
@@ -112,7 +130,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>William Friis</h1>
         <p>Game Dev | C# & C++ | Student</p>
@@ -182,7 +199,7 @@
                     <iframe src="https://youtu.be/pK55tqGDIig" frameborder="0" allowfullscreen></iframe>
                     <div class="card-content">
                         <h3>Skull of Duty</h3>
-                        <p>Final project for my first year of my game dev education. <br/>Traverse a dangerous dungeon, fighting off hordes of enemies as you try to find each lever. <br />Once the levers are pulled, make your way to the final room.<br/>Video created by Logan Duffy</p>
+                        <p>Final project for my first year of my game dev education. <br/>Traverse a dangerous dungeon, fighting off hordes of enemies as you try to find each lever. Once the levers are pulled, make your way to the final room.<br/><br/>Video created by Logan Duffy</p>
                         <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
                     </div>
                 </article>
@@ -192,13 +209,46 @@
         <section>
             <h2>Other Notable Projects</h2>
             <h3>Solo Projects</h3>
-            <p>Game Pad Input Converter:&nbsp;<a href="https://github.com/WilliamFriis1/GamePadPy">https://github.com/WilliamFriis1/GamePadPy</a><a href="https://github.com/WilliamFriis1/GamePadPy"><br><br></a></p>
+            <div class="school-projects-grid">
+                <div class="card-content">
+                    <h4>Game Pad Input Converter</h4>
+                    <p>Minor pythons script for a project created with a friend. We designed, 3D printed, coded and wired a small portable gaming rig with a rasperry pi running retroPI OS.</p>
+                    <p><a href="https://github.com/WilliamFriis1/GamePadPy">View Repositiory</a></p>
+                </div>
+            </div>
+            <br/>
             <h3>School Projects</h3>
-            <p>Hospital database:&nbsp;<a href="https://github.com/WilliamFriis1/SQLProj">https://github.com/WilliamFriis1/SQLProj</a></p>
-            <p>Search-based PCG Implementation:&nbsp;<a href="https://github.com/WilliamFriis1/SBPCG/settings">https://github.com/WilliamFriis1/SBPCG/settings</a></p>
-            <p>Diamond Square implementation: <a href="https://github.com/WilliamFriis1/DiamondSquare">https://github.com/WilliamFriis1/DiamondSquare</a></p>
-            <p>Cellular Automata implementation:&nbsp;<a href="https://github.com/WilliamFriis1/Cellular-Automata">https://github.com/WilliamFriis1/Cellular-Automata</a></p>
-            <p>Soduko Solver using Wave Function Collapse:&nbsp;<a href="https://github.com/WilliamFriis1/RealWFC">https://github.com/WilliamFriis1/RealWFC</a></p>
+            <div class="school-projects-grid">
+                <div class="card-content">
+                    <h4>Hospital Database</h4>
+                    <p>Database and interface designed to simulate a hospital administrative system. Created with Logan Duffy.</p>
+                    <p><a href="https://github.com/WilliamFriis1/SQLProj">View Repository</a></p>
+                </div>
+
+                <div class="card-content">
+                    <h4>Search-based PCG Implementation</h4>
+                    <p>Implemented a basic search-based procedural content map generator in Unity 2D.</p>
+                    <p><a href="https://github.com/WilliamFriis1/SBPCG/settings">View Repository</a></p>
+                </div>
+
+                <div class="card-content">
+                    <h4>Diamond Square Implementation</h4>
+                    <p>Implemented a basic diamond square algorithm to generate terrain in Unity 3D.</p>
+                    <p><a href="https://github.com/WilliamFriis1/DiamondSquare">View Repository</a></p>
+                </div>
+
+                <div class="card-content">
+                    <h4>Cellular Automata Implementation</h4>
+                    <p>Implemented a basic Cellular Automata cave generator in Unity 2D.</p>
+                    <p><a href="https://github.com/WilliamFriis1/Cellular-Automata">View Repository</a></p>
+                </div>
+
+                <div class="card-content">
+                    <h4>Sudoku Solver using Wave Function Collapse</h4>
+                    <p>Simple Sudoku solver using wave function collapse with backtracking.</p>
+                    <p><a href="https://github.com/WilliamFriis1/RealWFC">View Repository</a></p>
+                </div>
+            </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
