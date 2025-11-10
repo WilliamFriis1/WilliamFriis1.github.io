@@ -1,135 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>William Friis | Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    header {
-      background: #24292e;
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-    }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+            a:hover {
+                text-decoration: underline;
+            }
 
-    nav a {
-      color: #58a6ff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 2rem auto;
-    }
+        h1, h2, h3 {
+            margin: 0;
+            color: #24292e;
+        }
 
-    section {
-      margin-bottom: 3rem;
-    }
+        h2 {
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
 
-    h2 {
-      border-bottom: 2px solid #e1e4e8;
-      padding-bottom: 0.5rem;
-      color: #24292e;
-    }
+        /* Header */
+        header {
+            background: #24292e;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
+            header p {
+                margin-top: 0.5rem;
+            }
 
-    .card {
-      background: #fff;
-      border: 1px solid #e1e4e8;
-      border-radius: 8px;
-      padding: 1rem;
-      transition: transform 0.2s ease;
-    }
+        nav a {
+            margin: 0 10px;
+        }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      background: #24292e;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-  </style>
+        /* Projects */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            width: 100%;
+            align-items: flex-start;
+            transition: transform 0.2s;
+        }
+
+            .card:hover {
+                transform: translateY(-4px);
+            }
+
+            .card iframe {
+                max-width: 300px;
+                width: 100%;
+                height: 200px;
+                border-radius: 5px;
+            }
+
+        .card-content {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #24292e;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+            }
+
+                .card iframe {
+                    height: 180px;
+                }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>William Friis</h1>
-    <p>Game Dev | C# & C++ | Student</p>
-  </header>
+    <header>
+        <h1>William Friis</h1>
+        <p>Game Dev | C# & C++ | Student</p>
+    </header>
 
-  <main class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-          Passionate about game development and fascinated by all things tech, from software engineering to hardware and design.
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Passionate about game development and fascinated by all things tech, from software engineering to hardware and design.
+                My programming journey began with building simple websites at a young age. <br><br>
+                Later, I discovered object-oriented programming through Java in secondary school, which sparked a lasting interest in software design. Transitioning to C# felt natural, and I’ve since spent countless hours developing side projects and exploring advanced programming concepts. <br><br>
+                During university, I dove into C++ and gained a deeper understanding of optimization, algorithms, and data structures. Skills I now look to refine even more.<br><br>
+                I’m always eager to learn, experiment, and collaborate on projects that push creative and technical boundaries.
+            </p>
+        </section>
 
-          My programming journey began with building simple websites at a young age. <br/><br />Later, I discovered object-oriented programming through Java in secondary school, which sparked a lasting interest in software design. Transitioning to C# felt natural, and I’ve since spent countless hours developing side projects and exploring advanced programming concepts. <br/><br />
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <article class="card">
+                    <iframe src="https://youtu.be/sNk--fKL-iM" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <h3>ATC Simulator</h3>
+                        <p>A virtual reality air traffic controller simulator developed in Unity VR. <br /> Currently not a public repository for privacy reasons.</p>
+                        <a href="https://github.com/WilliamFriis1/ATC" target="_blank">View on GitHub →</a>
+                    </div>
+                </article>
 
-          During university, I dove into C++ and gained a deeper understanding of optimization, algorithms, and data structures. Skills I now look to refine even more.<br/><br />
+                <article class="card">
+                    <iframe src="https://youtu.be/aNz_8TIFXIw" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <h3>Assassins Football</h3>
+                        <p>A small game where two assassins face off in a game of football, developed in Unreal Engine 5<br\> Currently not on github</p>
+                        <a href="https://github.com/yourusername/project-two" target="_blank">View on GitHub →</a>
+                    </div>
+                </article>
 
-          I’m always eager to learn, experiment, and collaborate on projects that push creative and technical boundaries.
-      </p>
-    </section>
+                <article class="card">
+                    <iframe src="https://youtu.be/c8BJ9B9aMIg" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <h3>Platformer Game</h3>
+                        <p>Small platformer developed in MonoGame framework as a first year student</p>
+                        <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
+                    </div>
+                </article>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>🌟 Project One</h3>
-              <iframe width="500" height="281" src="https://www.youtube.com/embed/sNk--fKL-iM" frameborder="0" allowfullscreen=""></iframe>
+                <article class="card">
+                    <iframe src="https://youtu.be/t6kLjcCCMN4" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <h3>Donkey Kong</h3>
+                        <p>Donkey Kong game developed using the MonoGame framework as a first year student</p>
+                        <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <iframe src="https://youtu.be/XP_HwyrbEUc" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <h3>Break Out</h3>
+                        <p>Break Out game developed using the MonoGame framework as a first year student</p>
+                        <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <iframe src="https://youtu.be/pK55tqGDIig" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <h3>Skull of Duty</h3>
+                        <p>Final project for my first year of my game dev education. <br/>Traverse a dangerous dungeon, fighting off hordes of enemies as you try to find each lever. <br />Once the levers are pulled, make your way to the final room.<br/>Video created by Logan Duffy</p>
+                        <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
+                    </div>
+                </article>
             </div>
+        </section>
 
-        <div class="card">
-          <h3>⚙️ Project Two</h3>
-          <p>A short explanation of your second project. Built with React and Node.js.</p>
-          <a href="https://github.com/yourusername/project-two" target="_blank">View on GitHub →</a>
-        </div>
+        <section>
+            <h2>Other Notable Projects</h2>
+            <h3>Solo Projects</h3>
+            <p>Game Pad Input Converter:&nbsp;<a href="https://github.com/WilliamFriis1/GamePadPy">https://github.com/WilliamFriis1/GamePadPy</a><a href="https://github.com/WilliamFriis1/GamePadPy"><br><br></a></p>
+            <h3>School Projects</h3>
+            <p>Hospital database:&nbsp;<a href="https://github.com/WilliamFriis1/SQLProj">https://github.com/WilliamFriis1/SQLProj</a></p>
+            <p>Search-based PCG Implementation:&nbsp;<a href="https://github.com/WilliamFriis1/SBPCG/settings">https://github.com/WilliamFriis1/SBPCG/settings</a></p>
+            <p>Diamond Square implementation: <a href="https://github.com/WilliamFriis1/DiamondSquare">https://github.com/WilliamFriis1/DiamondSquare</a></p>
+            <p>Cellular Automata implementation:&nbsp;<a href="https://github.com/WilliamFriis1/Cellular-Automata">https://github.com/WilliamFriis1/Cellular-Automata</a></p>
+            <p>Soduko Solver using Wave Function Collapse:&nbsp;<a href="https://github.com/WilliamFriis1/RealWFC">https://github.com/WilliamFriis1/RealWFC</a></p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Email: <a href="mailto:William.Friis1@gmail.com">William.Friis1@gmail.com</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/william-friis-b8b053308/" target="_blank">LinkedIn</a><br>
+                GitHub: <a href="https://github.com/WilliamFriis1" target="_blank">My Github</a>
+            </p>
+        </section>
+    </main>
 
-        <div class="card">
-          <h3>📊 Project Three</h3>
-          <p>A dashboard app or data visualization tool — whatever you’re proud of!</p>
-          <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="William.Friis1@gmail.com">William.Friis1@gmail.com</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/william-friis-b8b053308/" target="_blank">LinkedIn</a><br>
-        GitHub: <a href="https://github.com/WilliamFriis1" target="_blank">My Github</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p></p>
-  </footer>
+    <footer>
+        <p></p>
+    </footer>
 
 </body>
 </html>
