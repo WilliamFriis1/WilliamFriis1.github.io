@@ -13,6 +13,23 @@
             color: #333;
             line-height: 1.6;
         }
+        .contact-icons {
+            display: flex;
+            gap: 1rem; /* space between icons */
+            justify-content: left; /* center horizontally */
+            margin-top: 1rem;
+        }
+
+            .contact-icons a img {
+                width: 40px;
+                height: 40px;
+                transition: transform 0.2s, filter 0.2s;
+            }
+
+                .contact-icons a img:hover {
+                    transform: scale(1.1); /* slightly enlarge on hover */
+                    filter: brightness(1.2); /* brighten for hover effect */
+                }
 
         a {
             color: #58a6ff;
@@ -252,11 +269,17 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>
-                Email: <a href="mailto:William.Friis1@gmail.com">William.Friis1@gmail.com</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/william-friis-b8b053308/" target="_blank">LinkedIn</a><br>
-                GitHub: <a href="https://github.com/WilliamFriis1" target="_blank">My Github</a>
-            </p>
+            <div class="contact-icons">
+                <a href="mailto:William.Friis1@gmail.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+                </a>
+                <a href="https://www.linkedin.com/in/william-friis-b8b053308/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/WilliamFriis1" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                </a>
+            </div>
         </section>
     </main>
 
